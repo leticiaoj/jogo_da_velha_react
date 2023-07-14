@@ -92,7 +92,7 @@ class Game extends React.Component {
         </div>
         <div className="game-info">
           <div>{status}</div>
-          <ol>{}</ol>
+          <ol>{/*TODO*/}</ol>
         </div>
       </div>
     );
@@ -101,10 +101,7 @@ class Game extends React.Component {
 
 //==============================================
 
-ReactDOM.render(
-  <Game />,
-  document.getElementById('root')
-  );
+ReactDOM.render(<Game />, document.getElementById('root'));
 
 function calculateWinner(square) {
   const lines = [
