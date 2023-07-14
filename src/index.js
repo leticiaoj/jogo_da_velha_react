@@ -3,8 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 function Square(props) {
+  let buttonClass = "square";
+  if (props.value === 'X') {
+    buttonClass += " x-square";
+  } else if (props.value === 'O') {
+    buttonClass += " o-square";
+  }
+
   return (
-    <button className="square" onClick={props.onClick}>
+    <button className={buttonClass} onClick={props.onClick}>
       {props.value}
     </button>
   );
@@ -98,13 +105,14 @@ class Game extends React.Component {
       const desc = move ? 'Ir para a jogada #' + move : 'Ir para o início do jogo';
       return (
         <li key={move}>
-          <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <button className='btn' onClick={() => this.jumpTo(move)}>{desc}</button>
         </li>
       );
     });
 
     return (
       <div className="game">
+          <h1 className='title'>Jogo da Velha:</h1>
         <div className="game-board">
           <Board squares={current.squares} onClick={(i) => this.handleClick(i)} />
         </div>

@@ -1,42 +1,88 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(250, 242, 207);
 }
+
 ol, ul {
   padding-left: 30px;
 }
+
 .board-row:after {
   clear: both;
   content: "";
   display: table;
 }
+
 .status {
   margin-bottom: 10px;
 }
+
 .square {
-background: rgb(255, 255, 255);
-border: 1px solid #999;
-float: left;
-font-size: 30px;
-font-weight: bold;
-line-height: 24px;
-height: 34px;
-margin-right: -1px;
-margin-top: -1px;
-padding: 0;
-text-align: center;
-width: 34px;
+  background: rgb(222, 197, 218);
+  border: 1px solid #343433;
+  float: left;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 60px;
+  height: 70px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 70px;
+  transition: background-color 0.3s;
+  cursor: pointer;
 }
+
 .square:focus {
-outline: none;
+  outline: none;
 }
+
 .kbd-navigation .square:focus {
   background: #ddd;
 }
+
+.square:hover {
+  background-color: #ffdea5;
+}
+
 .game {
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
+
 .game-info {
-margin-left: 20px;
+  margin-left: 20px;
 }
+
+.btn {
+  background-color: rgb(255, 0, 225);
+  border-radius: 5px;
+  color: #fff;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(238, 159, 0);
+}
+
+.title {
+  font-size: 24px;
+  margin: 20px;
+}
+
+.x-square {
+  color: rgb(248, 0, 219);
+}
+
+.o-square {
+  color: rgb(255, 157, 0);
+}
+
+
