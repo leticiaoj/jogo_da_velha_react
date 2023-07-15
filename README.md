@@ -1,4 +1,4 @@
-# Jogo da Velha
+# ☁️ Jogo da Velha ☁️
 
 Projeto desenvolvido com React, feito com instruções da Sky.One.
 
